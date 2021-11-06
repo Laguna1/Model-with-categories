@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Devise security gem
 gem 'devise'
+gem 'simple_form'
 # Rubocop
 gem 'rubocop'
 
