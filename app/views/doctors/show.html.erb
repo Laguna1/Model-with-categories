@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Doctor "<%= @doctor.fullname %>"`s Page</h1>
+<p class="mb-5">
+<small>It should be available for patients as a doctor page & for doctor as his profile page</small>
+</p>
 <p>
   <strong>Fullname:</strong>
   <%= @doctor.fullname %>
@@ -7,8 +10,11 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @doctor.category_id %>
+  <%= @doctor.category.name %>
 </p>
+
+<button>Button "Vizit this doctor" (for patient)</button> | or |
+<button>Button "Show Vizits" (for doctor)</button><br>
 
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>
