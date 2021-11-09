@@ -3,7 +3,17 @@
 <h1 class="text-uppercase my-5">Index page</h1>
 
 <h2>Doctors | <%= link_to 'All Categories', categories_path %> | <%= link_to 'New Category', new_category_path %></h2>
+<br>
+<br>
+<br>
+<% Category.all.each do |cat| %>
+  <%= link_to cat.name, doctors_path(category: cat.name)%>
+  <br>
+<% end %>
+<hr>
+<hr>
 
+<small>Doctors list (Available only for admin?)</small>
 <table>
   <thead>
     <tr>
