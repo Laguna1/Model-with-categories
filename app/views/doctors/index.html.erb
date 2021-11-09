@@ -16,7 +16,7 @@
   <tbody>
     <% @doctors.each do |doctor| %>
       <tr>
-        <td><%= doctor.fullname %></td>
+        <td><%= link_to doctor.fullname, doctor_path(doctor) %></td>
         <td><%= doctor.category.name %></td>
         <td><%= link_to 'Show', doctor %></td>
         <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
