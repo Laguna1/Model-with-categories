@@ -1,7 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[ show edit update destroy ]
-  before_action :set_doctor, only: %i[ show]
-
+  
   # GET /categories or /categories.json
   def index
     @categories = Category.all
@@ -74,4 +73,10 @@ class CategoriesController < ApplicationController
     def set_doctor
       @doctor = Doctor.find(params[:id])
     end
+
+    # Only allow a list of trusted parameters through.
+    def doctor_params
+      params.require(:doctor).permit(:id)
+    end
+
 end
